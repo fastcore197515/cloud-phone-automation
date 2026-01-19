@@ -1,0 +1,58 @@
+```groovy
+// Top-level build file for configuration of Cloud Phone Automation Android Project
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 34 // Improves performance and access to the latest features
+
+    defaultConfig {
+        applicationId "com.madhub.cloudphoneautomation" // Unique identifier for the application
+        minSdkVersion 21 // Expands user base by supporting older devices
+        targetSdkVersion 34 // Ensures compatibility with the latest Android features
+        versionCode 1 // Initial version code for updates
+        versionName "1.0.0" // Human-readable version name
+        resourceConfigurations "en" // Language support set to English
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false // Optimizes performance by keeping code intact
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro' // Protects the code while enhancing performance
+        }
+    }
+    
+    // Optimizing application performance through configurations
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8 // Enhances code quality and performance
+        targetCompatibility JavaVersion.VERSION_1_8 // Ensures modern language features are utilized effectively
+    }
+}
+
+dependencies {
+    // Essential libraries to support cloud phone automation functionalities
+
+    implementation 'androidx.appcompat:appcompat:1.5.1' // Enhances UI capabilities and compatibility across Android versions
+    implementation 'androidx.core:core-ktx:1.10.0' // Improves coding efficiency with Kotlin extensions for Android
+    implementation 'com.google.android.material:material:1.7.0' // Enables modern UI components, boosting user engagement
+
+    // Networking library for automated social media interactions
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0' // Achieves efficient API interaction for social media platforms
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // Improves data handling and serialization for social media content
+    
+    // Scheduling library to streamline automation tasks
+    implementation 'com.android.support:work-runtime:1.0.0' // Enhances background task management, allowing 24/7 operations
+
+    // Additional libraries to support specific social media features
+    implementation 'com.facebook.android:facebook-android-sdk:15.0.0' // Expands social media reach with Facebook integration
+    implementation 'com.instagram.android:instagram-api:1.0.0' // Supports Instagram management functionalities
+    implementation 'com.twitter.sdk.android:twitter-core:3.3.0' // Facilitates Twitter automation capabilities
+
+    // Testing dependencies to ensure reliability and performance
+    testImplementation 'junit:junit:4.13.2' // Ensures robust testing practices, improving app stability
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5' // Enhances testing functionality for improved user experience
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0' // Boosts UI testing efficiency and reliability
+}
+
+// This build.gradle configuration empowers the MadHub Cloud Phone Automation application to support seamless, efficient, and compliant social media management.
+// By leveraging powerful libraries and structured configurations, the application is set to deliver outstanding automation outcomes across multiple platforms while enhancing user experience and operational efficiency.
+```
